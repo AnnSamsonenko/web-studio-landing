@@ -1,0 +1,121 @@
+.burger-btn,
+.mobile-menu__close-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+  transition: color 250ms var(--cubic-bezier);
+}
+
+.burger-btn:hover,
+.burger-btn:focus,
+.burger-btn:active {
+  color: var(--brand-color);
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-color);
+  overflow: auto;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms var(--cubic-bezier), visibility 500ms var(--cubic-bezier);
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--brand-color);
+  }
+}
+
+.mobile-menu__nav-link {
+  @include font(40px, 500, 47px);
+  letter-spacing: 0.02em;
+  transition: color 250ms var(--cubic-bezier);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--brand-color);
+  }
+}
+
+.mobile-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__tel {
+  @include font(34px, 500, 40px);
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+}
+.mobile-menu__mail {
+  @include font(24px, 500, 28px);
+  letter-spacing: 0.02em;
+  color: var(--shadow-color);
+}
+.mobile-menu__contacts {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+.social-links__link {
+  @include font(18px, 500, 22px);
+  color: var(--brand-color);
+}
+.social-links {
+  display: flex;
+  position: relative;
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-links__item--decor:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 22px;
+  height: 0px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}

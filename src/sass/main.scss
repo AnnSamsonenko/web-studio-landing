@@ -1,7 +1,33 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+// UTILS
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/visually-hidden';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+//BASE
+@import './base/_common.scss';
+
+//COMPONENTS
+@import './components/_container-section.scss';
+@import './components/subtitle';
+@import './components/social-links';
+@import './components/logo';
+@import './components/button';
+@import './components/page-grid';
+@import './components/thumb-title';
+@import './components/page-icon';
+
+//LAYOUT
+@import './layout/header';
+@import './layout/mobile-menu';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/servises';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/backdrop';
+@import './layout/modal/modal-window';
+@import './layout/modal/modal-form';
+@import './layout/modal/modal-checkbox';
+@import './layout/filter-portfolio';
+@import './layout/cards-portfolio';

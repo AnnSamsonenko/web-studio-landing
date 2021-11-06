@@ -1,0 +1,38 @@
+.logo {
+  font-family: var(--secondary-family);
+  @include font(24px, 700, 28px);
+  letter-spacing: var(--common-spacing);
+  color: var(--logo-color);
+}
+.logo--blue {
+  color: var(--brand-color);
+}
+
+.head__logo {
+  padding: 16px 0;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 1200px) {
+  .head__logo {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font(26px, 700, 31px);
+  }
+
+  .head__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

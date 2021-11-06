@@ -1,0 +1,5 @@
+.thumb-title {
+  @include font($fw: 700);
+  letter-spacing: var(--common-spacing);
+  text-transform: uppercase;
+}

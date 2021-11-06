@@ -1,0 +1,56 @@
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  @include font($fs: 12px, $lh: 14px);
+  letter-spacing: 0.03em;
+  color: var(--shadow-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .form__checkbox {
+    @include font($lh: 24px);
+  }
+}
+
+.form__link {
+  color: var(--brand-color);
+}
+
+.checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__checkbox::before {
+  display: block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+  border-radius: 2px;
+  transition: transform 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier),
+    border-color 250ms var(--cubic-bezier);
+
+  .checkbox-hidden:checked + & {
+    background-image: url('../images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    background-color: var(--brand-color);
+    border-color: transparent;
+    transform: scale(1.2);
+  }
+
+  .checkbox-hidden:focus + & {
+    border-color: var(--brand-color);
+  }
+}

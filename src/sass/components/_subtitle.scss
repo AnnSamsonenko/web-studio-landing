@@ -1,0 +1,18 @@
+.subtitle {
+  text-align: center;
+  letter-spacing: var(--common-spacing);
+}
+
+@media screen and (max-width: 1200px) {
+  .subtitle {
+    margin-bottom: 30px;
+    @include font(28px, 700, 33px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    margin-bottom: 50px;
+    @include font(36px, 700, 42px);
+  }
+}
