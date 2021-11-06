@@ -3,14 +3,14 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://AnnSamsonenko.github.io/web-studio-landing",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /web-studio-landing/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/AnnSamsonenko/web-studio-landing"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
